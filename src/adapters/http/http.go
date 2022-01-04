@@ -87,3 +87,7 @@ func (handler *http) GetTopSecretSplit(c echo.Context) error {
 
 	return c.JSON(net_http.StatusOK, response)
 }
+
+func (handler *http) Health(c echo.Context) error {
+	return c.String(net_http.StatusOK, "OK")
+}

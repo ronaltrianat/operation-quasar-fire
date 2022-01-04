@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "15be8c4c-6800-4913-8bde-853cece8c633",
+		"name": "meli-tl-challenge",
+		"description": "Colleccion que contiene las peticiones a los servicios construidos para resolver la prueba tecnica de Mercado Libre.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "top-secret-ok",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n      \"distance\": 728.0110,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"un\",\n        \"\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": 500,\n        \"y\": 100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 583.0952,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": -500,\n        \"y\": -200\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret",
+					"protocol": "https",
+					"host": [
+						"ukqi44w6cl",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"topsecret"
+					]
+				},
+				"description": "Este servicio recibe las distancias y mensajes de los satelites rebeldes manejados por jedis. Con esta informacion el servicio triangula y obtiene la posicion de la nave del imperio y el mensaje secreto que esta transmitiendo."
+			},
+			"response": []
+		},
+		{
+			"name": "top-secret-ok-with-gap",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": true,\n      \"message\": [\n        \"\",\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n      \"distance\": 728.0110,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"un\",\n        \"\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": 500,\n        \"y\": 100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 583.0952,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": -500,\n        \"y\": -200\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret",
+					"protocol": "https",
+					"host": [
+						"ukqi44w6cl",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"topsecret"
+					]
+				},
+				"description": "Este servicio recibe las distancias y mensajes de los satelites rebeldes manejados por jedis. Con esta informacion el servicio triangula y obtiene la posicion de la nave del imperio y el mensaje secreto que esta transmitiendo."
+			},
+			"response": []
+		},
+		{
+			"name": "top-secret-error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n     \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret",
+					"protocol": "https",
+					"host": [
+						"ukqi44w6cl",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"topsecret"
+					]
+				},
+				"description": "Este servicio recibe las distancias y mensajes de los satelites rebeldes manejados por jedis. Con esta informacion el servicio triangula y obtiene la posicion de la nave del imperio y el mensaje secreto que esta transmitiendo."
+			},
+			"response": []
+		},
+		{
+			"name": "top-secrect-split-post(skywalker)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"distance\": 500.0,\n  \"gap\": false,\n  \"message\": [\n    \"\",\n    \"es\",\n    \"\",\n    \"\",\n    \"secreto\"\n  ],\n  \"position\": {\n    \"x\": 100,\n    \"y\": -100\n  }\n}"
+				},
+				"url": {
+					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/skywalker",
+					"protocol": "https",
+					"host": [
+						"ukqi44w6cl",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"topsecret_split",
+						"skywalker"
+					]
+				},
+				"description": "Este servicio recibe la informacion por satelite, la cual se almacena de forma interna y a traves de otro servicio se realiza la triangulacion para obtener la informacion de la nave imperial."
+			},
+			"response": []
+		},
+		{
+			"name": "top-secrect-split-post(kenobi)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"distance\": 583.0952,\n  \"gap\": false,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"\",\n    \"mensaje\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": -500,\n    \"y\": -200\n  }\n}"
+				},
+				"url": {
+					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/kenobi",
+					"protocol": "https",
+					"host": [
+						"ukqi44w6cl",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"topsecret_split",
+						"kenobi"
+					]
+				},
+				"description": "Este servicio recibe la informacion por satelite, la cual se almacena de forma interna y a traves de otro servicio se realiza la triangulacion para obtener la informacion de la nave imperial."
+			},
+			"response": []
+		},
+		{
+			"name": "top-secrect-split-post(sato)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"distance\": 728.0110,\n  \"gap\": false,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"un\",\n    \"\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": 500,\n    \"y\": 100\n  }\n}"
+				},
+				"url": {
+					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/sato",
+					"protocol": "https",
+					"host": [
+						"ukqi44w6cl",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"topsecret_split",
+						"sato"
+					]
+				},
+				"description": "Este servicio recibe la informacion por satelite, la cual se almacena de forma interna y a traves de otro servicio se realiza la triangulacion para obtener la informacion de la nave imperial."
+			},
+			"response": []
+		},
+		{
+			"name": "top-secrect-split-get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split?satellite_name=kenobi&satellite_name=skywalker&satellite_name=sato",
+					"protocol": "https",
+					"host": [
+						"ukqi44w6cl",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"topsecret_split"
+					],
+					"query": [
+						{
+							"key": "satellite_name",
+							"value": "kenobi"
+						},
+						{
+							"key": "satellite_name",
+							"value": "skywalker"
+						},
+						{
+							"key": "satellite_name",
+							"value": "sato"
+						}
+					]
+				},
+				"description": "Este servicio calcula la posicon y mensaje secreto transmitidos por los satelites y cuya informacion ya fue enviada y almacenada. Este servicio recibe como query parameters los nombres de los satelites sobre los cuales va a realizar la triangulacion de la nave del imperio."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
