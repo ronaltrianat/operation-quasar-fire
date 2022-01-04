@@ -11,7 +11,6 @@ Este servicio recibe la informacion de los satelites de forma individual y se al
 ```json
 {
   "distance": 500.0, //distancia-del-satelite-al-portacarga-imperial
-  "gap": false, //indica-si-mensaje-transmitido-tiene-un-desfase
   "message": [ // lista-string-con-el-mensaje-transmitido
     "",
     "es",
@@ -32,7 +31,6 @@ Este servicio recibe la informacion de los satelites de forma individual y se al
 ```json
 {
   "distance": 500.0,
-  "gap": false,
   "message": [
     "",
     "es",

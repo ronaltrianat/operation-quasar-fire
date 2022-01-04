@@ -11,10 +11,10 @@ build: tidy ## Build the binary file
 	go build -i -v $(PKG_LIST)
 
 docker-build:
-	docker build -t meli-tl-challenge .
+	docker build -t operation-quasar-fire .
 
 docker-run:
-	docker run -d -p 9000:9000 meli-tl-challenge
+	docker run -d -p 5000:5000 operation-quasar-fire
 
 fmt: ## Formmat src code files
 	@go fmt ${PKG_LIST}

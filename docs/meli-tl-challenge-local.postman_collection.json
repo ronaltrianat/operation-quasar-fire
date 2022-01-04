@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c45a44a7-7cd0-43e3-ba3e-f42c91bc90fe",
+		"_postman_id": "b068267c-a0aa-4054-a0e1-28e2b8aa70f3",
 		"name": "meli-tl-challenge-local",
 		"description": "Colleccion que contiene las peticiones a los servicios construidos para resolver la prueba tecnica de Mercado Libre.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -24,50 +24,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n      \"distance\": 728.0110,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"un\",\n        \"\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": 500,\n        \"y\": 100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 583.0952,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": -500,\n        \"y\": -200\n      }\n    }\n  ]\n}"
+					"raw": "{\n    \"satellites\": [\n        {\n            \"name\": \"skywalker\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        },\n        {\n            \"name\": \"sato\",\n            \"distance\": 728.0110,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"un\",\n                \"\",\n                \"\"\n            ],\n            \"position\": {\n                \"x\": 500,\n                \"y\": 100\n            }\n        },\n        {\n            \"name\": \"kenobi\",\n            \"distance\": 583.0952,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"\",\n                \"mensaje\",\n                \"\"\n            ],\n            \"position\": {\n                \"x\": -500,\n                \"y\": -200\n            }\n        }\n    ]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/topsecret",
+					"raw": "http://localhost:5000/topsecret",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
-					"path": [
-						"topsecret"
-					]
-				},
-				"description": "Este servicio recibe las distancias y mensajes de los satelites rebeldes manejados por jedis. Con esta informacion el servicio triangula y obtiene la posicion de la nave del imperio y el mensaje secreto que esta transmitiendo."
-			},
-			"response": []
-		},
-		{
-			"name": "top-secret-ok-with-gap",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					},
-					{
-						"key": "Accept",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": true,\n      \"message\": [\n        \"\",\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n      \"distance\": 728.0110,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"un\",\n        \"\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": 500,\n        \"y\": 100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 583.0952,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": -500,\n        \"y\": -200\n      }\n    }\n  ]\n}"
-				},
-				"url": {
-					"raw": "http://localhost:9000/topsecret",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
+					"port": "5000",
 					"path": [
 						"topsecret"
 					]
@@ -94,15 +59,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n     \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    }\n  ]\n}"
+					"raw": "{\n    \"satellites\": [\n        {\n            \"name\": \"skywalker\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        },\n        {\n            \"name\": \"sato\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        },\n        {\n            \"name\": \"kenobi\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        }\n    ]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/topsecret",
+					"raw": "http://localhost:5000/topsecret",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "5000",
 					"path": [
 						"topsecret"
 					]
@@ -129,15 +94,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"distance\": 500.0,\n  \"gap\": false,\n  \"message\": [\n    \"\",\n    \"es\",\n    \"\",\n    \"\",\n    \"secreto\"\n  ],\n  \"position\": {\n    \"x\": 100,\n    \"y\": -100\n  }\n}"
+					"raw": "{\n    \"distance\": 500.0,\n    \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n    ],\n    \"position\": {\n        \"x\": 100,\n        \"y\": -100\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/topsecret_split/skywalker",
+					"raw": "http://localhost:5000/topsecret_split/skywalker",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "5000",
 					"path": [
 						"topsecret_split",
 						"skywalker"
@@ -165,15 +130,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"distance\": 583.0952,\n  \"gap\": false,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"\",\n    \"mensaje\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": -500,\n    \"y\": -200\n  }\n}"
+					"raw": "{\n    \"distance\": 583.0952,\n    \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n    ],\n    \"position\": {\n        \"x\": -500,\n        \"y\": -200\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/topsecret_split/kenobi",
+					"raw": "http://localhost:5000/topsecret_split/kenobi",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "5000",
 					"path": [
 						"topsecret_split",
 						"kenobi"
@@ -201,15 +166,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"distance\": 728.0110,\n  \"gap\": false,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"un\",\n    \"\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": 500,\n    \"y\": 100\n  }\n}"
+					"raw": "{\n    \"distance\": 728.0110,\n    \"message\": [\n        \"este\",\n        \"\",\n        \"un\",\n        \"\",\n        \"\"\n    ],\n    \"position\": {\n        \"x\": 500,\n        \"y\": 100\n    }\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9000/topsecret_split/sato",
+					"raw": "http://localhost:5000/topsecret_split/sato",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "5000",
 					"path": [
 						"topsecret_split",
 						"sato"
@@ -231,26 +196,26 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9000/topsecret_split?satellite_name=kenobi&satellite_name=skywalker&satellite_name=sato",
+					"raw": "http://localhost:5000/topsecret_split?satellites=kenobi&satellites=skywalker&satellites=sato",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "5000",
 					"path": [
 						"topsecret_split"
 					],
 					"query": [
 						{
-							"key": "satellite_name",
+							"key": "satellites",
 							"value": "kenobi"
 						},
 						{
-							"key": "satellite_name",
+							"key": "satellites",
 							"value": "skywalker"
 						},
 						{
-							"key": "satellite_name",
+							"key": "satellites",
 							"value": "sato"
 						}
 					]
@@ -259,6 +224,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

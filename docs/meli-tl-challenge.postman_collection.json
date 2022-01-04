@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "15be8c4c-6800-4913-8bde-853cece8c633",
+		"_postman_id": "31109e28-9904-43d1-92a2-4e3b9ad85586",
 		"name": "meli-tl-challenge",
 		"description": "Colleccion que contiene las peticiones a los servicios construidos para resolver la prueba tecnica de Mercado Libre.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -24,59 +24,21 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n      \"distance\": 728.0110,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"un\",\n        \"\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": 500,\n        \"y\": 100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 583.0952,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": -500,\n        \"y\": -200\n      }\n    }\n  ]\n}"
+					"raw": "{\n    \"satellites\": [\n        {\n            \"name\": \"skywalker\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        },\n        {\n            \"name\": \"sato\",\n            \"distance\": 728.0110,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"un\",\n                \"\",\n                \"\"\n            ],\n            \"position\": {\n                \"x\": 500,\n                \"y\": 100\n            }\n        },\n        {\n            \"name\": \"kenobi\",\n            \"distance\": 583.0952,\n            \"message\": [\n                \"este\",\n                \"\",\n                \"\",\n                \"mensaje\",\n                \"\"\n            ],\n            \"position\": {\n                \"x\": -500,\n                \"y\": -200\n            }\n        }\n    ]\n}"
 				},
 				"url": {
-					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret",
+					"raw": "https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret",
 					"protocol": "https",
 					"host": [
-						"ukqi44w6cl",
+						"f0g0tobrb6",
 						"execute-api",
-						"us-east-2",
+						"us-east-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"dev",
-						"topsecret"
-					]
-				},
-				"description": "Este servicio recibe las distancias y mensajes de los satelites rebeldes manejados por jedis. Con esta informacion el servicio triangula y obtiene la posicion de la nave del imperio y el mensaje secreto que esta transmitiendo."
-			},
-			"response": []
-		},
-		{
-			"name": "top-secret-ok-with-gap",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					},
-					{
-						"key": "Accept",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": true,\n      \"message\": [\n        \"\",\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n      \"distance\": 728.0110,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"un\",\n        \"\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": 500,\n        \"y\": 100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 583.0952,\n      \"gap\": false,\n      \"message\": [\n        \"este\",\n        \"\",\n        \"\",\n        \"mensaje\",\n        \"\"\n      ],\n      \"position\": {\n        \"x\": -500,\n        \"y\": -200\n      }\n    }\n  ]\n}"
-				},
-				"url": {
-					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret",
-					"protocol": "https",
-					"host": [
-						"ukqi44w6cl",
-						"execute-api",
-						"us-east-2",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"dev",
+						"operation-quasar-fire",
+						"api",
 						"topsecret"
 					]
 				},
@@ -102,20 +64,21 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"satellites\": [\n    {\n      \"name\": \"skywalker\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"sato\",\n     \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    },\n    {\n      \"name\": \"kenobi\",\n      \"distance\": 500.0,\n      \"gap\": false,\n      \"message\": [\n        \"\",\n        \"es\",\n        \"\",\n        \"\",\n        \"secreto\"\n      ],\n      \"position\": {\n        \"x\": 100,\n        \"y\": -100\n      }\n    }\n  ]\n}"
+					"raw": "{\n    \"satellites\": [\n        {\n            \"name\": \"skywalker\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        },\n        {\n            \"name\": \"sato\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        },\n        {\n            \"name\": \"kenobi\",\n            \"distance\": 500.0,\n            \"message\": [\n                \"\",\n                \"es\",\n                \"\",\n                \"\",\n                \"secreto\"\n            ],\n            \"position\": {\n                \"x\": 100,\n                \"y\": -100\n            }\n        }\n    ]\n}"
 				},
 				"url": {
-					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret",
+					"raw": "https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret",
 					"protocol": "https",
 					"host": [
-						"ukqi44w6cl",
+						"f0g0tobrb6",
 						"execute-api",
-						"us-east-2",
+						"us-east-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"dev",
+						"operation-quasar-fire",
+						"api",
 						"topsecret"
 					]
 				},
@@ -141,20 +104,21 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"distance\": 500.0,\n  \"gap\": false,\n  \"message\": [\n    \"\",\n    \"es\",\n    \"\",\n    \"\",\n    \"secreto\"\n  ],\n  \"position\": {\n    \"x\": 100,\n    \"y\": -100\n  }\n}"
+					"raw": "{\n  \"distance\": 500.0,\n  \"message\": [\n    \"\",\n    \"es\",\n    \"\",\n    \"\",\n    \"secreto\"\n  ],\n  \"position\": {\n    \"x\": 100,\n    \"y\": -100\n  }\n}"
 				},
 				"url": {
-					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/skywalker",
+					"raw": "https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split/skywalker",
 					"protocol": "https",
 					"host": [
-						"ukqi44w6cl",
+						"f0g0tobrb6",
 						"execute-api",
-						"us-east-2",
+						"us-east-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"dev",
+						"operation-quasar-fire",
+						"api",
 						"topsecret_split",
 						"skywalker"
 					]
@@ -181,20 +145,21 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"distance\": 583.0952,\n  \"gap\": false,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"\",\n    \"mensaje\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": -500,\n    \"y\": -200\n  }\n}"
+					"raw": "{\n  \"distance\": 583.0952,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"\",\n    \"mensaje\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": -500,\n    \"y\": -200\n  }\n}"
 				},
 				"url": {
-					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/kenobi",
+					"raw": "https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split/kenobi",
 					"protocol": "https",
 					"host": [
-						"ukqi44w6cl",
+						"f0g0tobrb6",
 						"execute-api",
-						"us-east-2",
+						"us-east-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"dev",
+						"operation-quasar-fire",
+						"api",
 						"topsecret_split",
 						"kenobi"
 					]
@@ -221,20 +186,21 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"distance\": 728.0110,\n  \"gap\": false,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"un\",\n    \"\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": 500,\n    \"y\": 100\n  }\n}"
+					"raw": "{\n  \"distance\": 728.0110,\n  \"message\": [\n    \"este\",\n    \"\",\n    \"un\",\n    \"\",\n    \"\"\n  ],\n  \"position\": {\n    \"x\": 500,\n    \"y\": 100\n  }\n}"
 				},
 				"url": {
-					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/sato",
+					"raw": "https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split/sato",
 					"protocol": "https",
 					"host": [
-						"ukqi44w6cl",
+						"f0g0tobrb6",
 						"execute-api",
-						"us-east-2",
+						"us-east-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"dev",
+						"operation-quasar-fire",
+						"api",
 						"topsecret_split",
 						"sato"
 					]
@@ -255,30 +221,31 @@
 					}
 				],
 				"url": {
-					"raw": "https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split?satellite_name=kenobi&satellite_name=skywalker&satellite_name=sato",
+					"raw": "https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split?satellites=kenobi&satellites=skywalker&satellites=sato",
 					"protocol": "https",
 					"host": [
-						"ukqi44w6cl",
+						"f0g0tobrb6",
 						"execute-api",
-						"us-east-2",
+						"us-east-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"dev",
+						"operation-quasar-fire",
+						"api",
 						"topsecret_split"
 					],
 					"query": [
 						{
-							"key": "satellite_name",
+							"key": "satellites",
 							"value": "kenobi"
 						},
 						{
-							"key": "satellite_name",
+							"key": "satellites",
 							"value": "skywalker"
 						},
 						{
-							"key": "satellite_name",
+							"key": "satellites",
 							"value": "sato"
 						}
 					]
@@ -287,6 +254,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
