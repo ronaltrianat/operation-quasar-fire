@@ -1,6 +1,7 @@
 package services
 
 import (
+	"github.com/ronaltrianat/operation-quasar-fire/src/config/apperrors"
 	"github.com/ronaltrianat/operation-quasar-fire/src/core/domain"
 	"github.com/ronaltrianat/operation-quasar-fire/src/core/ports"
 )
@@ -21,6 +22,9 @@ func NewTopSecretService(trilateration ports.TrilaterationPort, message ports.Me
 }
 
 func (service *topSecretService) TopSecret(data *domain.SatellitesData) (*domain.TopSecret, error) {
+	if data == nil || len(data.Satellites) < 3 {
+		return nil, apperrors.ErrInvalidNumberSatellites
+	}
 	return service.generateTopSecret(data)
 }
 
