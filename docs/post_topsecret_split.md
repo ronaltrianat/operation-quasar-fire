@@ -2,7 +2,7 @@
 
 Este servicio recibe la informacion de los satelites de forma individual y se almacena en base de datos.
 
-**URL** : `https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/{satellite_name}`
+**URL** : `https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split/{satellite_name}`
 
 **Method** : `POST`
 
@@ -27,7 +27,7 @@ Este servicio recibe la informacion de los satelites de forma individual y se al
 ```
 
 **Solicitud de ejemplo**
-`POST` `https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split/skywalker`
+`POST` `https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split/skywalker`
 
 ```json
 {

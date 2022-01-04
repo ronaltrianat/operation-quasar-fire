@@ -2,7 +2,7 @@
 
 Este servicio recibe informacion de 3 satelites y a partir de la misma calcula el mensaje secreto y la posicion de la nave del imperio.
 
-**URL** : `https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret`
+**URL** : `https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret`
 
 **Method** : `POST`
 
@@ -14,7 +14,6 @@ Este servicio recibe informacion de 3 satelites y a partir de la misma calcula e
     {
       "name": "nombre", //nombre-del-satelite
       "distance": 500.0, //distancia-del-satelite-al-portacarga-imperial
-      "gap": false, //indica-si-mensaje-transmitido-tiene-un-desfase
       "message": [ // lista-string-con-el-mensaje-transmitido
         "",
         "es",
@@ -30,7 +29,6 @@ Este servicio recibe informacion de 3 satelites y a partir de la misma calcula e
     {
       "name": "nombre", //nombre-del-satelite
       "distance": 500.0, //distancia-del-satelite-al-portacarga-imperial
-      "gap": false, //indica-si-mensaje-transmitido-tiene-un-desfase
       "message": [ // lista-string-con-el-mensaje-transmitido
         "",
         "es",
@@ -46,7 +44,6 @@ Este servicio recibe informacion de 3 satelites y a partir de la misma calcula e
     {
       "name": "nombre", //nombre-del-satelite
       "distance": 500.0, //distancia-del-satelite-al-portacarga-imperial
-      "gap": false, //indica-si-mensaje-transmitido-tiene-un-desfase
       "message": [ // lista-string-con-el-mensaje-transmitido
         "",
         "es",
@@ -71,7 +68,6 @@ Este servicio recibe informacion de 3 satelites y a partir de la misma calcula e
     {
       "name": "skywalker",
       "distance": 500.0,
-      "gap": false,
       "message": [
         "",
         "es",
@@ -87,7 +83,6 @@ Este servicio recibe informacion de 3 satelites y a partir de la misma calcula e
     {
       "name": "sato",
       "distance": 728.0110,
-      "gap": false,
       "message": [
         "este",
         "",
@@ -103,7 +98,6 @@ Este servicio recibe informacion de 3 satelites y a partir de la misma calcula e
     {
       "name": "kenobi",
       "distance": 583.0952,
-      "gap": false,
       "message": [
         "este",
         "",

@@ -2,13 +2,13 @@
 
 Este servicio recibe los nombres de los satelites sobre los cuales se deben realizar los calculos de la posicion y mensaje transmitidos por el portacarga imperial. La informacion de cada satelite ya fue almacenada con anterioridad por otro servicio. Los nombres de los satelites se envian como query parameter. El nombre del parametro es: satellite_name
 
-**URL** : `https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split?satellite_name=nombre&satellite_name=nombre&satellite_name=nombre`
+**URL** : `https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split?satellites=nombre&satellites=nombre&satellites=nombre`
 
 **Method** : `GET`
 
 **Solicitud de ejemplo**
 
-`GET` `https://ukqi44w6cl.execute-api.us-east-2.amazonaws.com/dev/topsecret_split?satellite_name=kenobi&satellite_name=skywalker&satellite_name=sato`
+`GET` `https://f0g0tobrb6.execute-api.us-east-1.amazonaws.com/operation-quasar-fire/api/topsecret_split?satellites=kenobi&satellites=skywalker&satellites=sato`
 
 ## Respuesta exitosa
 
