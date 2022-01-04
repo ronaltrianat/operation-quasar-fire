@@ -8,16 +8,47 @@ import (
 type topSecretService struct {
 	trilaterationUseCase ports.TrilaterationPort
 	messageUseCase       ports.MessagePort
+	repository           ports.RepositoryPort
 }
 
-func NewTopSecretService(trilateration ports.TrilaterationPort, message ports.MessagePort) *topSecretService {
+func NewTopSecretService(trilateration ports.TrilaterationPort, message ports.MessagePort,
+	repository ports.RepositoryPort) *topSecretService {
 	return &topSecretService{
 		trilaterationUseCase: trilateration,
 		messageUseCase:       message,
+		repository:           repository,
 	}
 }
 
 func (service *topSecretService) TopSecret(data *domain.SatellitesData) (*domain.TopSecret, error) {
+	return service.generateTopSecret(data)
+}
+
+func (service *topSecretService) SaveTopSecretSplit(data *domain.Satellite) error {
+	if err := service.repository.Save(data); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (service *topSecretService) RetrieveTopSecretSplit(satellites []string) (*domain.TopSecret, error) {
+	satellitesList := []domain.Satellite{}
+	for _, v := range satellites {
+		data, err := service.repository.Get(v)
+		if err != nil {
+			return nil, err
+		}
+		satellitesList = append(satellitesList, *data)
+	}
+
+	satellitesData := domain.SatellitesData{
+		Satellites: satellitesList,
+	}
+
+	return service.generateTopSecret(&satellitesData)
+}
+
+func (service *topSecretService) generateTopSecret(data *domain.SatellitesData) (*domain.TopSecret, error) {
 	message, err := service.messageUseCase.CalculateMessage(data)
 	if err != nil {
 		return nil, err

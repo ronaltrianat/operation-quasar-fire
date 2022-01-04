@@ -44,13 +44,19 @@ func (useCase MessageUseCase) mergeMessages(messageA, messageB []string) []strin
 func (useCase MessageUseCase) cleanMessage(message []string) string {
 	msg := strings.Builder{}
 	for idx, v := range message {
+		if v == "" {
+			continue
+		}
+
 		if idx < len(message)-1 && message[idx] != message[idx+1] {
 			msg.WriteString(v)
 			msg.WriteString(" ")
 		}
 	}
 
-	msg.WriteString(message[len(message)-1])
+	if message[len(message)-1] != "" {
+		msg.WriteString(message[len(message)-1])
+	}
 
 	return msg.String()
 }

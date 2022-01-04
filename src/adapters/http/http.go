@@ -8,6 +8,12 @@ import (
 	"github.com/ronaltrianat/operation-quasar-fire/src/core/ports"
 )
 
+const (
+	namePathParameter           = "name"
+	nameQueryParameters         = "satellites"
+	minNumberSatellitesRequired = 3
+)
+
 type http struct {
 	topSecretPort ports.TopSecretPort
 }
@@ -33,6 +39,50 @@ func (handler *http) TopSecret(c echo.Context) error {
 
 	if err != nil {
 		return c.NoContent(net_http.StatusInternalServerError)
+	}
+
+	return c.JSON(net_http.StatusOK, response)
+}
+
+func (handler *http) SaveTopSecretSplit(c echo.Context) error {
+	name := c.Param(namePathParameter)
+	if len(name) == 0 {
+		return c.NoContent(net_http.StatusBadRequest)
+	}
+
+	request := new(SatelliteRequest)
+	if err := c.Bind(request); err != nil {
+		return c.NoContent(net_http.StatusBadRequest)
+	}
+
+	request.Name = name
+	if err := request.Validate(); err != nil {
+		return c.NoContent(net_http.StatusBadRequest)
+	}
+
+	satellite := request.ToDomainData(name)
+
+	err := handler.topSecretPort.SaveTopSecretSplit(satellite)
+
+	if err != nil {
+		return c.NoContent(net_http.StatusInternalServerError)
+	}
+
+	return c.NoContent(net_http.StatusOK)
+}
+
+func (handler *http) GetTopSecretSplit(c echo.Context) error {
+	urlQuery := c.Request().URL.Query()
+	satellites := urlQuery[nameQueryParameters]
+
+	if len(satellites) != minNumberSatellitesRequired {
+		return c.NoContent(net_http.StatusBadRequest)
+	}
+
+	response, err := handler.topSecretPort.RetrieveTopSecretSplit(satellites)
+
+	if err != nil {
+		return c.String(net_http.StatusNotFound, err.Error())
 	}
 
 	return c.JSON(net_http.StatusOK, response)

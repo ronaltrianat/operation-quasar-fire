@@ -19,6 +19,23 @@ type SatelliteRequest struct {
 	Position Position `json:"position" validate:"required"`
 }
 
+func (r SatelliteRequest) ToDomainData(name string) *domain.Satellite {
+	satellite := &domain.Satellite{
+		Name:     name,
+		Distance: r.Distance,
+		Message:  r.Message,
+		Position: domain.Position(r.Position),
+	}
+	return satellite
+}
+
+func (r SatelliteRequest) Validate() error {
+	if err := validate.Struct(r); err != nil {
+		return err
+	}
+	return nil
+}
+
 type TopSecretRequest struct {
 	Satellites []SatelliteRequest `json:"satellites" validate:"required,len=3,dive,required"`
 }
