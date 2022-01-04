@@ -3,6 +3,7 @@ package usecases
 import (
 	"strings"
 
+	"github.com/ronaltrianat/operation-quasar-fire/src/config/apperrors"
 	"github.com/ronaltrianat/operation-quasar-fire/src/core/domain"
 )
 
@@ -13,6 +14,10 @@ func NewMessageUseCase() *MessageUseCase {
 }
 
 func (useCase *MessageUseCase) CalculateMessage(data *domain.SatellitesData) (string, error) {
+	if data == nil || len(data.Satellites) < 3 {
+		return "", apperrors.ErrInvalidNumberSatellites
+	}
+
 	msg := data.Satellites[0].Message
 	for _, v := range data.Satellites[1:] {
 		msg = useCase.mergeMessages(msg, v.Message)

@@ -3,6 +3,7 @@ package usecases
 import (
 	"math"
 
+	"github.com/ronaltrianat/operation-quasar-fire/src/config/apperrors"
 	"github.com/ronaltrianat/operation-quasar-fire/src/core/domain"
 )
 
@@ -25,6 +26,10 @@ const (
 //
 // metodo de eliminacion de 3 ecuaciones y 2 incognitas
 func (useCase *TrilaterationUseCase) TriangulatePosition(data *domain.SatellitesData) (domain.Position, error) {
+	if data == nil || len(data.Satellites) < 3 {
+		return domain.Position{}, apperrors.ErrInvalidNumberSatellites
+	}
+
 	positionY := useCase.getPositionY(data)
 
 	var positionX float64
