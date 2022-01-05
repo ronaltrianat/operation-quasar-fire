@@ -94,6 +94,7 @@ Seguridad a nivel de Infraestructura en la Nube:
 
 ## Monitore y Almacenamiento de logs
 Hacemos uso de un APM para validar metricas como:
+
 * La cantidad de tiempo que toma cada solicitud.
 * La cantidad de peticiones fallidas por segundo.
 * El numero de peticiones procesadas por segundo.
