@@ -93,6 +93,15 @@ Seguridad a nivel de Infraestructura en la Nube:
 ![Diagrama 3D](/docs/topsecret_split_notification.png)
 
 ## Monitore y Almacenamiento de logs
+Hacemos uso de un APM para validar metricas como:
+
+* La cantidad de tiempo que toma cada solicitud.
+* La cantidad de peticiones fallidas por segundo.
+* El numero de peticiones procesadas por segundo.
+* Visualizar la interaccion entre servicios.
+* Generar alertas cuando algun servicio falle.
+* Visualizar las solicitudes end-to-end que permitan identificar puntos de mejora.
+
 ![Monitoreo App](/docs/monitoreo-app.png)
 
 ## Golang Linter
