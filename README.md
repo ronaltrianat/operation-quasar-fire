@@ -89,7 +89,13 @@ Seguridad a nivel de Infraestructura en la Nube:
 
 [AWS Security Products](https://aws.amazon.com/es/products/security/)
 
-### linter con docker
+## Notificacion a los centros de comando en la tierra
+![Diagrama 3D](/docs/topsecret_split_notification.png)
+
+## Monitore y Almacenamiento de logs
+![Monitoreo App](/docs/monitoreo-app.png)
+
+## Golang Linter
 
 [Golang Linter](https://golangci-lint.run/)
 
