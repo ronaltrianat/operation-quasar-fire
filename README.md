@@ -63,6 +63,32 @@ Al final los resultados nos indican lo siguiente:
 
 El servicio con esta prueba sin la necesidad de escalar fue capaz de procesar 88 RPS(Request per second) o 5280 RPM(Request per minute).
 
+## Consideraciones de seguridad
+
+Filtros de seguridad a nivel de backend:
+* Autenticacion
+* Autorizacion
+* Cifrar/Descifrar request/response
+* HMAC
+* RECAPCHA
+
+Hacer uso de patrones como API Gateway o Sidecar para evitar agregar logica adicional a los componentes core.
+
+![Diagrama 3D](/docs/security-back-1.png)
+![Diagrama 3D](/docs/security-back-2.png)
+
+
+Seguridad a nivel de Infraestructura en la Nube:
+* AWS WAF: Filtre el tráfico web malintencionado
+* AWS Shield: Protección frente a ataques DDoS
+* AWS KMS: Administración y almacenamiento clave
+* AWS Secrets Manager: Alterne, administre y recupere datos confidenciales
+* AWS Certificate Manager: Aprovisionamiento, administración e implementación de certificados públicos y privados SSL/TLS
+
+![Diagrama 3D](/docs/security-infra-aws.png)
+
+[AWS Security Products](https://aws.amazon.com/es/products/security/)
+
 ### linter con docker
 
 [Golang Linter](https://golangci-lint.run/)
